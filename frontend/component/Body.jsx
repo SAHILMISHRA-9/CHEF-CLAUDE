@@ -32,7 +32,7 @@ export function Body() {
       setLoading(true);
       setError("");
 
-      const res = await fetch("http://localhost:5000/api/recipe", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/recipe`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
